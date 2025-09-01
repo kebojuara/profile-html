@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profil – Tugas HTML Dasar</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.6; margin: 0; color: #222; }
+    header { background: #f3f4f6; padding: 2rem 1rem; text-align: center; }
+    main { max-width: 960px; margin: 0 auto; padding: 1rem; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    @media (min-width: 768px) { .grid { grid-template-columns: 280px 1fr; } }
+    .card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem; }
+    img.profile { width: 100%; max-width: 260px; border-radius: 12px; display: block; margin: 0 auto; }
+    h1, h2 { margin: 0.2rem 0 0.6rem; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #e5e7eb; padding: 0.6rem; text-align: left; }
+    th { background: #f9fafb; }
+    form { display: grid; gap: 0.75rem; }
+    label { font-weight: 600; }
+    input[type="text"], input[type="email"], textarea { width: 100%; padding: 0.6rem; border: 1px solid #d1d5db; border-radius: 8px; font: inherit; }
+    textarea { min-height: 120px; }
+    .btn { background: #111827; color: #fff; padding: 0.7rem 1rem; border: none; border-radius: 10px; cursor: pointer; font-weight: 600; }
+    nav a { margin-right: 0.75rem; text-decoration: none; color: #1f2937; font-weight: 600; }
+    .social a { display: inline-block; margin-right: 0.75rem; }
+    footer { text-align: center; color: #6b7280; padding: 1.5rem 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>William Hans Chandra</h1>
+    <p>Mahasiswa yang Kaya Akan Rasa Penasaran</p>
+  </header>
+
+  <main>
+    <nav class="card" aria-label="Navigasi halaman">
+      <a href="#tentang">Tentang</a>
+      <a href="#hobi">Hobi</a>
+      <a href="#pendidikan">Pendidikan</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+
+    <section id="tentang" class="grid">
+      <div class="card">
+        <img class="profile" src="fotoprofil.png" alt="Foto Profil" />
+      </div>
+      <article class="card">
+        <h2>Tentang Saya</h2>
+        <p>Halo! Saya William Hans Chandra, mahasiswa Teknik Informatika di Institut Teknologi Sepuluh Nopember. Saya lahir di Mojokerto, Provinsi Jawa Timur pada 11 Februari 2006 dan saat ini berdomisili di Apartemen Puncak Kertajaya, Surabaya.</p>
+        <p>Saya tertarik pada programming, matematika, dan pasar modal. Di luar akademik, saya pernah melakukan magang di bidang marketing dan pemrograman ERP.</p>
+      </article>
+    </section>
+
+    <section id="hobi" class="card">
+      <h2>Daftar Hobi</h2>
+      <ul>
+        <li>Membaca buku</li>
+        <li>Trading saham</li>
+        <li>Bermain billiard</li>
+        <li>Mendengarkan podcast</li>
+      </ul>
+    </section>
+
+    <section id="pendidikan" class="card">
+      <h2>Riwayat Pendidikan</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tahun</th>
+            <th>Institusi</th>
+            <th>Jurusan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2024 – Sekarang</td>
+            <td>Institut Teknologi Sepuluh Nopember</td>
+            <td>S1 Teknik Informatika</td>
+          </tr>
+          <tr>
+            <td>2021 – 2024</td>
+            <td>SMAK St. Louis 1 Surabaya</td>
+            <td>IPA</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Media Sosial</h2>
+      <p class="social">
+        <a href="https://www.instagram.com/williamhansc/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/william-hans-chandra-b24a6722b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/kebojuara" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </section>
+
+    <section id="kontak" class="card">
+      <h2>Form Kontak</h2>
+      <form action="#" method="post">
+        <div>
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="nama@email.com" required />
+        </div>
+        <div>
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" placeholder="Tulis pesan Anda..."></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
+
